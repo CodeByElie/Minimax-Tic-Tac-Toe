@@ -28,7 +28,7 @@ class TicTacToe:
 
 
     def __init__(self,tab=[[-1,-1,-1],[-1,-1,-1],[-1,-1,-1]],turn = 0, winner = -1):
-        self.__tab = tab
+        self.__tab = [[i for i in line] for line in tab]
         self.__turn = turn
         self.__winner = winner
 
