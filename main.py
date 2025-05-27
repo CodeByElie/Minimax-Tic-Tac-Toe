@@ -6,9 +6,7 @@ g = TicTacToe()
 
 while not g.isEnded():
     g.display()
-    x = int(input())
-    y = int(input())
-    print(Minimax(g))
+    x,y=Minimax(g)
     g.play(x,y)
     if not g.isEnded():
         c = choice(g.getFreeCells())

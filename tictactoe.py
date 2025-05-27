@@ -97,6 +97,14 @@ class TicTacToe:
             self.__winner = -1
             return True
         return False
+    
+    def getTurn(self) -> int:
+        """
+        Returns the current turn number in the game.
+        Returns:
+            int: The current turn number.
+        """
+        return self.__turn
 
     def getWinner(self) -> int:
         """
@@ -120,3 +128,4 @@ class TicTacToe:
             list[tuple[int, int]]: A list of (x, y) tuples indicating the positions of all free cells.
         """
         return [(x,y) for x in range(3) for y in range(3) if self.__tab[y][x]==-1]
+    
